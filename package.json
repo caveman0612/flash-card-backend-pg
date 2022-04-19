@@ -8,7 +8,9 @@
     "start:dev": "nodemon ./src/server",
     "start": "node ./src/server",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client"
+    "client": "npm start --prefix client",
+    "migrate": "npx knex migrate:latest",
+    "seed": "npx knex seed:run"
   },
   "author": "",
   "license": "ISC",
