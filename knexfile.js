@@ -14,7 +14,7 @@ pgconfig.ssl = { rejectUnauthorized: false };
 
 module.exports = {
   development: {
-    client: "postgresql",
+    client: "pg",
     connection: pgconfig,
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
