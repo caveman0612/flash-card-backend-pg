@@ -10,7 +10,7 @@ const { DATABASE_URL } = process.env;
 
 const pgconfig = parse(DATABASE_URL);
 
-pgconfig.ssl = { rejectUnauthorized: false };
+pgconfig.ssl = { rejectUnauthorized: true };
 
 module.exports = {
   development: {
@@ -21,4 +21,12 @@ module.exports = {
     },
     seeds: { directory: path.join(__dirname, "src", "db", "seeds") },
   },
+  // production: {
+  //   client: "pg",
+  //   connection: pgconfig,
+  //   migrations: {
+  //     directory: path.join(__dirname, "src", "db", "migrations"),
+  //   },
+  //   seeds: { directory: path.join(__dirname, "src", "db", "seeds") },
+  // },
 };
