@@ -21,12 +21,12 @@ module.exports = {
     },
     seeds: { directory: path.join(__dirname, "src", "db", "seeds") },
   },
-  // production: {
-  //   client: "pg",
-  //   connection: pgconfig,
-  //   migrations: {
-  //     directory: path.join(__dirname, "src", "db", "migrations"),
-  //   },
-  //   seeds: { directory: path.join(__dirname, "src", "db", "seeds") },
-  // },
+  production: {
+    client: "pg",
+    connection: pgconfig,
+    migrations: {
+      directory: path.join(__dirname, "src", "db", "migrations"),
+    },
+    seeds: { directory: path.join(__dirname, "src", "db", "seeds") },
+  },
 };
